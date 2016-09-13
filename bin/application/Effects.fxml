@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EffectsController">
+   <top>
+      <TabPane prefHeight="482.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Shadow Effect">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="196.0" prefWidth="600.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="591.0" spacing="2.0">
+                           <children>
+                              <Label text="Offset X" />
+                              <Slider fx:id="offsetXSlider" max="200.0" min="-200.0" showTickLabels="true" value="15.0" />
+                              <Label text="Offset Y" />
+                              <Slider fx:id="offsetYSlider" min="-100.0" showTickLabels="true" showTickMarks="true" value="15.0" />
+                              <Label text="Radius" />
+                              <Slider fx:id="radiusSlider" max="127.0" showTickLabels="true" value="64.0" />
+                              <Label text="Spread" />
+                              <Slider fx:id="spreadSlider" majorTickUnit="0.1" max="1.0" showTickLabels="true" value="0.5" />
+                              <HBox prefHeight="37.0" prefWidth="571.0" spacing="8.0">
+                                 <children>
+                                    <Label text="Color" />
+                                    <ColorPicker fx:id="colorPicker" />
+                                    <Label text="Blur Type" />
+                                    <ComboBox fx:id="blurCombo" prefWidth="150.0" promptText="Wybierz..." />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="100.0" layoutX="200.0" layoutY="298.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Glow Effect">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="592.0">
+                           <children>
+                              <Label text="Threshold">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Slider fx:id="threshold" majorTickUnit="0.05" max="1.0" prefHeight="14.0" prefWidth="464.0" showTickLabels="true" value="0.5" />
+                              <Text fx:id="text" fill="#ee2020" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Witaj świecie" translateX="50.0" translateY="50.0">
+                                 <font>
+                                    <Font name="Arial Black" size="63.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Reflection Effect">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="196.0" prefWidth="600.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="591.0" spacing="2.0">
+                           <children>
+                              <Label text="Top Offset" />
+                              <Slider fx:id="topOffsetSlider" majorTickUnit="1.0" max="10.0" showTickLabels="true" value="5.0" />
+                              <Label text="Fraction" />
+                              <Slider fx:id="fractionSlider" majorTickUnit="0.1" max="1.0" showTickLabels="true" showTickMarks="true" value="0.5" />
+                              <Label text="Top Opacity" />
+                              <Slider fx:id="topOpacitySlider" majorTickUnit="0.1" max="1.0" showTickLabels="true" value="0.5" />
+                              <Label text="Bottom Opacity" />
+                              <Slider fx:id="bottomOpacitySlider" majorTickUnit="0.1" max="1.0" showTickLabels="true" value="0.5" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <Text fx:id="reflectionText" layoutX="80.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Witaj świecie" textAlignment="CENTER" wrappingWidth="431.13671875">
+                           <font>
+                              <Font size="61.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Box Blur Effect">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="196.0" prefWidth="600.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="591.0" spacing="2.0">
+                           <children>
+                              <Label text="Width" />
+                              <Slider fx:id="widthSlider" majorTickUnit="1.0" max="30.0" showTickLabels="true" value="15.0" />
+                              <Label text="Height" />
+                              <Slider fx:id="heightSlider" majorTickUnit="1.0" max="30.0" showTickLabels="true" showTickMarks="true" value="15.0" />
+                              <Label text="Iterations" />
+                              <Slider fx:id="iterationsSlider" majorTickUnit="1.0" max="10.0" showTickLabels="true" value="5.0" />
+                              <HBox prefHeight="100.0" prefWidth="581.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <Text fx:id="boxBlurText" fill="#e80404" layoutX="69.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Witaj świecie" textAlignment="CENTER" wrappingWidth="462.13671875">
+                           <font>
+                              <Font name="Arial Black" size="61.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="ColorAdjust Effect">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="196.0" prefWidth="600.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="591.0" spacing="2.0">
+                           <children>
+                              <Label text="Hue" />
+                              <Slider fx:id="hueSlider" majorTickUnit="0.1" max="1.0" showTickLabels="true" value="0.0" />
+                              <Label text="Saturation" />
+                              <Slider fx:id="saturationSlider" majorTickUnit="0.1" max="1.0" showTickLabels="true" showTickMarks="true" value="0.0" />
+                              <Label text="Brightness" />
+                              <Slider fx:id="brightnessSlider" majorTickUnit="0.1" max="1.0" showTickLabels="true" value="0.0" />
+                              <Label text="Contrast" />
+                              <Slider fx:id="contrastSlider" majorTickUnit="0.1" max="1.0" showTickLabels="true" value="0.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <ImageView fx:id="imageView" fitHeight="206.0" fitWidth="445.0" layoutX="82.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </top>
+   <bottom>
+      <HBox prefHeight="25.0" prefWidth="596.0" spacing="2.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Tutaj różne info..." />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
